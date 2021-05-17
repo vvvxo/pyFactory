@@ -64,9 +64,9 @@ def layout(pro_series):
                 tmpMaxCoordY = setFactory.coord[numPro][0]
                 if (testMax < testMin):  # 如果有交集
                     setFactory.coord[numPro][1] = setFactory.coord[pro_series[j]][1] + (
-                        setFactory.area[pro_series[j]][1] + setFactory.area[numPro][1]) / 2
+                        setFactory.area[pro_series[j]][1] + setFactory.area[numPro][1]) / 2 + 1
                 else:
-                    setFactory.coord[numPro][1] = setFactory.area[numPro][1] / 2
+                    setFactory.coord[numPro][1] = setFactory.area[numPro][1] / 2 + 1
 
                 # 选择较高的Y坐标
                 if setFactory.coord[numPro][0] > tmpMaxCoordY:
