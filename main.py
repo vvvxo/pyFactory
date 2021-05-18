@@ -14,7 +14,7 @@ def create(size, length):
 
 
 def main():
-    genetic.layout([3, 7, 9, 3, 2, 1, 5, 4,6,8])
+    genetic.layout([0,1,2,3,4,5,6,7,8,9])
     test.show_image()
 
 main()

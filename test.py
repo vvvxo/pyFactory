@@ -8,6 +8,7 @@ ax.plot([1, 4], [1, 4])
 
 def add_rectangle(area, xy):
     print(area, xy)
+    # print(xy[0] - area[0] / 2, xy[1] - area[1] / 2)
     ax.add_patch(
         patches.Rectangle(
             (xy[0] - area[0] / 2, xy[1] - area[1] / 2),
