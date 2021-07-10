@@ -1,0 +1,30 @@
+skinparam dpi 800
+@startuml layout
+start
+repeat:读取工序;
+:读取工位长度;
+if(超过厂房长)then(no)
+    :当前长度与上个坐标相加;
+else(yes)
+    :坐标设为0;
+endif
+:读取工位宽度;
+repeat:读取之前工序;
+if(工位宽有相交) then(yes)
+    :纵坐标与相交工序坐标相加;
+else(no)
+    :continue;
+endif
+repeat while(是否读取完之前的工序) is (否) not (是)
+repeat while(是否读取完所有工序) is (否) not(是)
+:返回厂房长和宽;
+
+stop
+@enduml layout
+
+@startuml sumFree
+start
+repeat:读取工序;
+    :计算工序之前的
+
+@enduml sumFree

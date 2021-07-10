@@ -1,10 +1,9 @@
+# 其实是将得到的工厂布局绘制出来
 import matplotlib.pyplot as plt
 import matplotlib.patches as patches
-import setFactory as set
 
 fig, ax = plt.subplots()
 ax.plot([1, 4], [1, 4])
-
 
 def add_rectangle(area, xy):
     print(area, xy)
@@ -23,5 +22,22 @@ def add_rectangle(area, xy):
     )
 
 
+def newImage(imageName, area, xy):
+    tmp, tmpImage = plt.subplots()
+    tmpImage.plot(imageName)
+    add_rectangle(area, xy)
+
+    plt.savefig('./image/%s.jpg' % imageName)
+    plt.close(imageName)
+
+
+def clearImage():
+    plt.cla()
+
+
 def show_image():
     plt.show()
+
+
+def closeImage():
+    plt.close()
